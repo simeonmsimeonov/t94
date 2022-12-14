@@ -2,10 +2,14 @@ import "./scss/app.scss";
 import Application from "./js/Application";
 
 window.addEventListener("DOMContentLoaded", () => {
-  // This block will be executed once the page is loaded and ready
   const app = new Application();
-  // Used to access the app instance by the automated tests
   app.setEmojis(["🐒", "🦍", "🦧"]);
-  app.addBananas();
+  const monkeyArr = [];
+  app.addBananas(monkeyArr);
+
+  const myDiv = document.getElementById("emojis");
+  const myP = document.createElement("p");
+  myP.textContent = monkeyArr;
+  myDiv.appendChild(myP);
   window.__JS_APP = app;
 });

@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
   app.setEmojis(["🐒", "🦍", "🦧"]);
   const monkeyArr = [];
   app.addBananas(monkeyArr);
+  console.log(monkeyArr);
 
   const myDiv = document.getElementById("emojis");
   const myP = document.createElement("p");
